@@ -1,0 +1,7 @@
+{
+  "name": "HEH APP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
