@@ -1,23 +1,49 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import {
+  IonBadge,
+  IonButton,
+  IonCheckbox,
+  IonContent,
+  IonFab,
+  IonFabButton,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonNote,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import {add, arrowForwardOutline, nutrition, star} from 'ionicons/icons';
+import React from "react";
+import ExploreContainer from "../components/ExploreContainer";
+import "./Home.css";
+import { format } from "path";
+import { RouteComponentProps } from "react-router";
 
-const Home: React.FC = () => {
+
+const Home: React.FC<RouteComponentProps> = (props) => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+        <IonToolbar> 
+          <IonTitle> HEH App</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <IonContent className="ion-text-center">
+        <h1>Welcome!</h1>
+        <IonButton className="ion-padding" onClick={()=> props.history.push('/get-started')}>
+          <IonIcon slot="start" icon={arrowForwardOutline}/>
+          Get Started!
+        </IonButton>
+              <br /><br/><br/><br/>
+              <h4>Already have an account?</h4>
+              <IonButton className="ion-padding" onClick={() => props.history.push('/login')}>
+                  <IonIcon slot="start" icon={arrowForwardOutline} />
+          Login
+        </IonButton>
+
       </IonContent>
     </IonPage>
   );
