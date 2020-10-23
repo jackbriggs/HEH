@@ -40,7 +40,7 @@ import {
           <h1>Woo Hoo! <br /> <br/>
           So we can customise the program to your life, let's get to know your food preferences a little better!
           </h1>
-          <IonButton className="ion-padding" onClick={()=> props.history.push('/custom2')}>
+          <IonButton expand="block" className="ion-padding" onClick={()=> props.history.push('/custom2')}>
             <IonIcon slot="start" icon={arrowForwardOutline}/>
             Get Started!
           </IonButton>

@@ -53,6 +53,9 @@ const ShoppingList: React.FC<RouteComponentProps> = (props) => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref="/homepage" />
+                    </IonButtons>
                     <IonButtons slot="secondary">
                         <IonButton onClick={() => props.history.push('/homepage')} >
                             <IonIcon slot="icon-only" icon={home} />
@@ -80,19 +83,19 @@ const ShoppingList: React.FC<RouteComponentProps> = (props) => {
                 <IonGrid>
                     <IonRow>
                         <IonCol>
-                            <IonButton size="small" onClick={() => props.history.push('/habittracker')}>
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/habittracker')}>
                                 <IonIcon slot="start" icon={analytics} />
                                     Habit Tracker
                                 </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton size="small" onClick={() => props.history.push('/mealplanner')}>
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/mealplanner')}>
                                 <IonIcon slot="start" icon={restaurant} />
                                     Meal Planner
                                 </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton size="small" onClick={() => props.history.push('/recipeshome')}>
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/recipeshome')}>
                                 <IonIcon slot="start" icon={search} />
                                     Browse recipes
                                 </IonButton>

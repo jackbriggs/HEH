@@ -47,7 +47,7 @@ const Loading: React.FC<RouteComponentProps> = (props) => {
           message={"Please wait..."}
           duration={5000}
         />
-        <IonButton className="ion-padding" onClick={()=> props.history.push('/custom1')}>
+        <IonButton expand="block" color="success" className="ion-padding" onClick={()=> props.history.push('/custom1')}>
             <IonIcon slot="start" icon={arrowForwardOutline}/>
             Let's Go!
           </IonButton>

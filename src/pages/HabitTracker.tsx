@@ -57,6 +57,9 @@ const HabitTracker: React.FC<RouteComponentProps> = (props) => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref="/homepage" />
+                    </IonButtons>
                     <IonButtons slot="secondary">
                         <IonButton onClick={() => props.history.push('/homepage')} >
                             <IonIcon slot="icon-only" icon={home} />
@@ -294,22 +297,27 @@ const HabitTracker: React.FC<RouteComponentProps> = (props) => {
                     </IonCardContent>
                 </IonCard>
 
+                <IonButton expand="block" size="large" color="success" className="ion-padding" onClick={() => props.history.push('/habittrackercalendar')}>
+                    <IonIcon slot="start" icon={arrowForwardCircle} />
+                    Switch to Total Module View
+                </IonButton>
+
                 <IonGrid>
                     <IonRow>
                         <IonCol>
-                            <IonButton size="small" onClick={() => props.history.push('/shoppinglist')}>
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/shoppinglist')}>
                                 <IonIcon slot="start" icon={list} />
                                     Shopping List
                                 </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton size="small" onClick={() => props.history.push('/mealplanner')}>
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/mealplanner')}>
                                 <IonIcon slot="start" icon={restaurant} />
                                     Meal Planner
                                 </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton size="small" onClick={() => props.history.push('/recipeshome')}>
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/recipeshome')}>
                                 <IonIcon slot="start" icon={search} />
                                     Browse recipes
                                 </IonButton>

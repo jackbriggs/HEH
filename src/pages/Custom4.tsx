@@ -67,9 +67,9 @@ import {
 
 
 
-          <IonButton className="ion-padding" onClick={()=> props.history.push('/start')}>
+          <IonButton expand="block" className="ion-padding" onClick={()=> props.history.push('/start')}>
             <IonIcon slot="start" icon={arrowForwardOutline}/>
-            Next
+            Finish
           </IonButton>
   
         </IonContent>

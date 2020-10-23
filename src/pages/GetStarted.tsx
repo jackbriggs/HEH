@@ -44,7 +44,7 @@ const GetStarted: React.FC<RouteComponentProps> = (props) => {
           <IonLabel position="floating">Last Name</IonLabel>
           <IonInput id="last-name"></IonInput>
         </IonItem>
-        <IonButton className="ion-padding" onClick={()=> props.history.push('/email')}>
+        <IonButton expand="block" className="ion-padding" onClick={()=> props.history.push('/email')}>
           <IonIcon slot="start" icon={arrowForwardOutline}/>
           Next
         </IonButton>

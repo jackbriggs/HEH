@@ -47,6 +47,9 @@ const RecipesHome: React.FC<RouteComponentProps> = (props) => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref="/homepage" />
+                    </IonButtons>
                     <IonButtons slot="secondary">
                         <IonButton onClick={() => props.history.push('/homepage')} >
                             <IonIcon slot="icon-only" icon={home} />

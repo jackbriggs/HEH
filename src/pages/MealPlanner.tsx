@@ -28,8 +28,8 @@ import {
     IonDatetime,
     IonThumbnail,
 } from "@ionic/react";
-import { add, arrowForwardOutline, nutrition, star, home, personCircle, search, ellipsisHorizontal, ellipsisVertical, analytics, fastFood, chatbubbleEllipses, list, arrowForwardCircle, walk, warning, wine, wifi, pin, restaurant, arrowForward, calendarOutline } from 'ionicons/icons';
-import React, { useState } from "react";
+import { add, arrowForwardOutline, nutrition, star, home, personCircle, search, ellipsisHorizontal, ellipsisVertical, analytics, fastFood, chatbubbleEllipses, list, arrowForwardCircle, walk, warning, wine, wifi, pin, restaurant, arrowForward, calendarOutline, calendar } from 'ionicons/icons';
+import React, { useState, Component } from "react";
 import ExploreContainer from "../components/ExploreContainer";
 import "./Home.css";
 import { format } from "path";
@@ -40,6 +40,7 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import Calendar from 'react-calendar';
 
 
 const MealPlanner: React.FC<RouteComponentProps> = (props) => {
@@ -50,11 +51,13 @@ const MealPlanner: React.FC<RouteComponentProps> = (props) => {
     const [dinner, setDinner] = useState<string>('');
     const [snacks, setSnacks] = useState<string>('');
 
-
     return (
         <IonPage>
             <IonHeader>
                 <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref="/homepage" />
+                    </IonButtons>
                     <IonButtons slot="secondary">
                         <IonButton onClick={() => props.history.push('/homepage')} >
                             <IonIcon slot="icon-only" icon={home} />
@@ -67,6 +70,12 @@ const MealPlanner: React.FC<RouteComponentProps> = (props) => {
                 </IonToolbar>
             </IonHeader>
             <IonContent className="ion-text-center">
+
+                <IonButton expand="block" size="large" color="success" className="ion-padding" onClick={() => props.history.push('/habittrackercalendar')}>
+                    <IonIcon slot="start" icon={calendar} />
+                    Switch to Calendar View
+                </IonButton>
+
                 <IonItem>
                     <IonIcon slot="start" icon={calendarOutline}/>
                     <IonLabel>
@@ -136,6 +145,7 @@ const MealPlanner: React.FC<RouteComponentProps> = (props) => {
                         </IonItem>
                     </IonCardContent>
                 </IonCard>
+
                 <IonGrid>
                     <IonRow className="ion-align-items-center">
                         <IonCol>
@@ -145,21 +155,15 @@ const MealPlanner: React.FC<RouteComponentProps> = (props) => {
                                 </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton expand="full" size="small" onClick={() => props.history.push('/mealplanner')}>
-                                <IonIcon slot="start" icon={restaurant} />
-                                    Edit Meal Plan
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/homepage')}>
+                                <IonIcon slot="start" icon={home} />
+                                    Home
                                 </IonButton>
                         </IonCol>
                         <IonCol>
-                            <IonButton expand="full" size="small" onClick={() => props.history.push('/shoppinglist')}>
+                            <IonButton expand="block" size="small" onClick={() => props.history.push('/shoppinglist')}>
                                 <IonIcon slot="start" icon={list} />
                                     Shopping List
-                                </IonButton>
-                        </IonCol>
-                        <IonCol>
-                            <IonButton expand="full" size="small" onClick={() => props.history.push('/mealplanner')}>
-                                <IonIcon slot="start" icon={search} />
-                                    Live Chat 
                                 </IonButton>
                         </IonCol>
                     </IonRow>

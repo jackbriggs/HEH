@@ -32,8 +32,8 @@ const Home: React.FC<RouteComponentProps> = (props) => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-text-center">
-        <h1>Welcome!</h1>
-        <IonButton className="ion-padding" onClick={()=> props.history.push('/get-started')}>
+        <h1>Welcome to the Healthy Eating Hub App!<br/> Create an account or login to an existing account. </h1>
+        <IonButton size="large" expand="block" className="ion-padding" onClick={()=> props.history.push('/get-started')}>
           <IonIcon slot="start" icon={arrowForwardOutline}/>
           Get Started!
         </IonButton>

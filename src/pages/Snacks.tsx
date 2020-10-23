@@ -51,8 +51,10 @@ const Snacks: React.FC<RouteComponentProps> = (props) => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonBackButton defaultHref="/recipeshome" />
+                    </IonButtons>
                     <IonButtons slot="secondary">
-                        <IonBackButton defaultHref="/home" />
                         <IonButton onClick={() => props.history.push('/shoppinglist')} >
                             Go to shopping list
                             <IonIcon slot="start" icon={list} />

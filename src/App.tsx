@@ -6,8 +6,6 @@ import Home from './pages/Home';
 import { add } from 'ionicons/icons';
 import GetStarted from './pages/GetStarted';
 import Email from './pages/Email';
-import Address from './pages/Address';
-import DOB from './pages/DOB';
 import Custom1 from './pages/Custom1';
 import Custom2 from './pages/Custom2';
 import Custom3 from './pages/Custom3';
@@ -46,6 +44,7 @@ import Lunch from './pages/Lunch';
 import Dinner from './pages/Dinner';
 import Snacks from './pages/Snacks';
 import SmartCarbs from './pages/SmartCarbs';
+import HabitTrackerCalendar from './pages/HabitTrackerCalendar';
 
 const App: React.FC = () => {
     const isAuthed = true;
@@ -56,8 +55,6 @@ const App: React.FC = () => {
                     <Route path="/home" component={Home} />
                     <Route path="/get-started" component={GetStarted} />
                     <Route path="/email" component={Email} />
-                    <Route path="/address" component={Address} />
-                    <Route path="/dob" component={DOB} />
                     <Route path="/loading" component={Loading} />
                     <Route path="/custom1" component={Custom1} />
                     <Route path="/custom2" component={Custom2} />
@@ -77,6 +74,7 @@ const App: React.FC = () => {
                     <Route path="/dinner" component={Dinner} />
                     <Route path="/snacks" component={Snacks} />
                     <Route path="/smartcarbs" component={SmartCarbs} />
+                    <Route path="/habittrackercalendar" component={HabitTrackerCalendar} />
                     <Redirect exact from="/" to="/home" />
                 </IonRouterOutlet>
             </IonReactRouter>

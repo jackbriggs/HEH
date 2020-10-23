@@ -39,9 +39,9 @@ import {
         <IonContent className="ion-text-center">
           <h1>Great! <br/> 
           You're ready to get started!</h1>
-          <IonButton className="ion-padding" onClick={()=> props.history.push('/homepage')}>
+          <IonButton expand="block" color="success" className="ion-padding" onClick={()=> props.history.push('/homepage')}>
             <IonIcon slot="start" icon={arrowForwardOutline}/>
-            Start
+            Exlpore app
           </IonButton>
   
         </IonContent>
